@@ -8,7 +8,6 @@ public class TestDriver {
         deque.addLast(30);
         deque.addFirst(10);
 
-        // We print manually because we didn't write a display() method in MyDeque
         System.out.println("Removed First: " + deque.removeFirst());
         System.out.println("Removed Last: " + deque.removeLast());
 
@@ -33,6 +32,7 @@ public class TestDriver {
             heap.extractMin();
             heap.extractMin();
             heap.extractMin();
+            heap.extractMin(); // FOURTH CALL ADDED TO TRIGGER THE ERROR
         } catch (IllegalStateException e) {
             System.out.println("Error caught: " + e.getMessage());
         }
